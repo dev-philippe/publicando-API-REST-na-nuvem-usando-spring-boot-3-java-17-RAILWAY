@@ -12,9 +12,10 @@ public class Account {
     @Column(unique = true)
     private String number;
     private String agency;
-    @Column(nullable = false, scale = 13, precision = 2)
+
+    @Column(precision = 13,scale = 2)
     private BigDecimal balance;
-    @Column(name = "aditional_limit",scale = 13, precision = 2)
+    @Column(name = "aditional_limit",precision = 13,scale = 2)
     private BigDecimal limit;
 
     public Long getId() {
